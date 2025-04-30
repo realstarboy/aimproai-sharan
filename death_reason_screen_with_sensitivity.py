@@ -1,4 +1,3 @@
-
 import streamlit as st
 from PIL import Image
 
@@ -16,17 +15,13 @@ def death_reason_screen():
     st.image("death_analysis_overlay.jpg", caption="AI Overlay – Crosshair vs Ideal Aim", use_column_width=True)
 
     st.markdown("### ❌ Reason for Death")
-    st.warning(
-        "**You went prone mid-fight**, which drastically reduced your movement speed and made you a static target.\n"
-        "The enemy, likely standing and ready, out-reacted you."
-    )
+    st.warning("**You went prone mid-fight**, which drastically reduced your movement speed and made you a static target.\\n"
+               "The enemy, likely standing and ready, out-reacted you.")
 
     st.markdown("### ✅ What You Should Have Done")
-    st.success(
-        "- Use a **quick crouch spray or strafe peek** instead of going prone.\n"
-        "- **Pre-aim** the enemy’s location and hold crosshair at chest level.\n"
-        "- In TDM, avoid prone unless you're catching enemies off guard from cover."
-    )
+    st.success("- Use a **quick crouch spray or strafe peek** instead of going prone.\\n"
+               "- **Pre-aim** the enemy’s location and hold crosshair at chest level.\\n"
+               "- In TDM, avoid prone unless you're catching enemies off guard from cover.")
 
     st.markdown("### 🎯 Detected Sensitivity (Estimated from Gameplay)")
     st.code("Camera: 60\\nADS: 60\\nGyro: 215\\nGyro ADS: 200", language="yaml")
@@ -38,4 +33,5 @@ def death_reason_screen():
     st.markdown("---")
     st.info("💡 Pro Tip: You're a reactive sprayer. Higher Gyro ADS helps hold upper-chest tracking in mid-fights.")
 
-if __
+if __name__ == "__main__":
+    death_reason_screen()
