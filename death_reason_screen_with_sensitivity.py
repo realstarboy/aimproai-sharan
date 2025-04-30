@@ -1,5 +1,5 @@
-
 import streamlit as st
+from PIL import Image
 
 def death_reason_screen():
     st.title("🧠 AimPro AI: Death Analysis Report")
@@ -10,6 +10,9 @@ def death_reason_screen():
     st.write("🔍 Scope: Red Dot")
     st.write("📍 Map: TDM - Warehouse")
     st.write("👁️ Perspective: TPP")
+
+    st.markdown("### 🖼️ Freeze Frame: What Went Wrong")
+    st.image("death_analysis_overlay.jpg", caption="AI Overlay – Crosshair vs Ideal Aim", use_column_width=True)
 
     st.markdown("### ❌ Reason for Death")
     st.warning(
@@ -25,14 +28,13 @@ def death_reason_screen():
     )
 
     st.markdown("### 🎯 Detected Sensitivity (Estimated from Gameplay)")
-    st.code("Camera: 60\nADS: 60\nGyro: 215\nGyro ADS: 200", language="yaml")
+    st.code("Camera: 60\\nADS: 60\\nGyro: 215\\nGyro ADS: 200", language="yaml")
 
     st.markdown("### 🛠️ Recommended Sensitivity (For Your Style)")
-    st.code("Camera: 65\nADS: 55\nGyro: 230\nGyro ADS: 250", language="yaml")
+    st.code("Camera: 65\\nADS: 55\\nGyro: 230\\nGyro ADS: 250", language="yaml")
     st.caption("⚙️ Boosted Gyro ADS for faster vertical pull during sprays. Balanced ADS and Gyro for close tracking.")
 
     st.markdown("---")
     st.info("💡 Pro Tip: You're a reactive sprayer. Higher Gyro ADS helps hold upper-chest tracking in mid-fights.")
 
-if __name__ == "__main__":
-    death_reason_screen()
+if __
